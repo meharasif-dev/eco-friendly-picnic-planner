@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Friendly Picnic & Meal Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Eco-Friendly Picnic & Meal Planner</h1>
+        <p>Plan a sustainable picnic and meals with ease. Reduce waste, eat locally, and enjoy nature!</p>
+    </header>
+
+    <section class="intro">
+        <h2>Welcome to Your Eco-Friendly Planner</h2>
+        <p>Follow the tips and use the interactive tools to plan a zero-waste picnic and weekly meal plan with ease.</p>
+    </section>
+
+    <!-- Picnic Planner Form -->
+    <section class="picnic-planner">
+        <h2>Plan Your Picnic</h2>
+        <form id="picnicForm">
+            <label for="numberOfPeople">Number of People Attending:</label>
+            <input type="number" id="numberOfPeople" min="1" required>
+
+            <label for="picnicDate">Pick a Date for Your Picnic:</label>
+            <input type="date" id="picnicDate" required>
+
+            <label for="location">Choose Your Picnic Location (German Parks):</label>
+            <select id="parkLocation" required>
+                <option value="Tiergarten, Berlin">Tiergarten, Berlin</option>
+                <option value="Englischer Garten, Munich">Englischer Garten, Munich</option>
+                <option value="Prater, Hamburg">Prater, Hamburg</option>
+                <option value="SchwabenQuellen, Stuttgart">SchwabenQuellen, Stuttgart</option>
+                <option value="Hirschgarten, Munich">Hirschgarten, Munich</option>
+                <option value="Mauerpark, Berlin">Mauerpark, Berlin</option>
+                <option value="Treptower Park, Berlin">Treptower Park, Berlin</option>
+                <option value="Tempelhofer Feld, Berlin">Tempelhofer Feld, Berlin</option>
+                <option value="Volkspark Friedrichshain, Berlin">Volkspark Friedrichshain, Berlin</option>
+            </select>
+
+            <h3>Food Items</h3>
+            <p>Select your food items for the picnic:</p>
+            <ul>
+                <li><input type="checkbox" id="fruit"> Fresh Fruits (e.g., Apples, Bananas, Oranges)</li>
+                <li><input type="checkbox" id="veggies"> Fresh Vegetables (e.g., Carrots, Cucumbers, Cherry Tomatoes)</li>
+                <li><input type="checkbox" id="salad"> Salad (e.g., Spinach, Lettuce, Arugula)</li>
+                <li><input type="checkbox" id="bread"> Whole Grain Bread or Rolls</li>
+                <li><input type="checkbox" id="cheese"> Vegan Cheese or Regular Cheese</li>
+                <li><input type="checkbox" id="dips"> Hummus or Guacamole</li>
+                <li><input type="checkbox" id="snacks"> Sustainable Snacks (e.g., Granola Bars, Nuts)</li>
+            </ul>
+
+            <h3>Eco-Friendly Packing List</h3>
+            <p>Select the items you’ll need for packing your picnic sustainably:</p>
+            <ul id="packingList">
+                <!-- Packing list will dynamically populate here based on food selection -->
+            </ul>
+
+            <label for="trashAvailable">Does the park have a trash disposal area?</label>
+            <select id="trashAvailable">
+                <option value="Auto-Select">Auto-Select (Based on Park)</option>
+                <option value="Yes">Yes, there is a trash disposal area.</option>
+                <option value="No">No, trash disposal is not available.</option>
+            </select>
+
+            <button type="submit" class="eco-button">Save Picnic Plan</button>
+        </form>
+
+        <div id="summary"></div>
+        <button id="downloadBtn" class="eco-button" style="display:none;">Download Picnic Plan</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
